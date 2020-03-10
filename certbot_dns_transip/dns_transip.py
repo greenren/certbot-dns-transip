@@ -95,7 +95,7 @@ class _TransipClient(object):
 
     def __init__(self, username, key_file):
         self.logger = logger.getChild(self.__class__.__name__)
-        self.domain_service = DomainService(login=username, private_key_file=key_file)
+        self.domain_service = DomainService(login=username, private_key_file=key_file, endpoint='api.transip.nl/v5/')
 
     def add_txt_record(self, domain_name, record_name, record_content):
         """
